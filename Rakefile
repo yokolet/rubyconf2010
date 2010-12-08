@@ -32,19 +32,19 @@ namespace :clojure do
       arg :value => CLOJURE_DM_SAMPLE
       classpath do
         pathelement :location => "#{BASE_PATH}/clojure/lib/clojure.jar"
-        pathelement :location => "#{BASE_PATH}/jruby-complete.jar" 
+        pathelement :location => "#{BASE_PATH}/jruby-complete-1.5.5.jar" 
         pathelement :location => "#{BASE_PATH}/clojure" 
       end
     end
   end
 
   desc 'Run uuidtools example'
-  task :uuid => 'env' do
+  task :uuid do
     ant.java :fork => "true", :classname => "clojure.main" do
       arg :value => CLOJURE_UUID_SAMPLE
       classpath do
         pathelement :location => "#{BASE_PATH}/clojure/lib/clojure.jar"
-        pathelement :location => "#{BASE_PATH}/jruby-complete.jar" 
+        pathelement :location => "#{BASE_PATH}/jruby-complete-1.5.5.jar" 
       end
     end
   end
@@ -74,7 +74,7 @@ namespace :scala do
       classpath do
         pathelement :location => "#{BASE_PATH}/scala/lib/scala-compiler.jar"
         pathelement :location => "#{BASE_PATH}/scala/lib/scala-library.jar"
-        pathelement :location => "#{BASE_PATH}/jruby-complete.jar" 
+        pathelement :location => "#{BASE_PATH}/jruby-complete-1.5.5.jar" 
       end
     end
   end
@@ -88,7 +88,7 @@ namespace :scala do
       classpath do
         pathelement :location => "#{BASE_PATH}/scala/lib/scala-compiler.jar"
         pathelement :location => "#{BASE_PATH}/scala/lib/scala-library.jar"
-        pathelement :location => "#{BASE_PATH}/jruby-complete.jar" 
+        pathelement :location => "#{BASE_PATH}/jruby-complete-1.5.5.jar" 
       end
     end
   end
@@ -115,7 +115,7 @@ namespace :jython do
       arg :value => "#{BASE_PATH}/jython/features/fibonacci.feature"
       classpath do
         pathelement :location => "#{BASE_PATH}/jython/lib/jython.jar"
-        pathelement :location => "#{BASE_PATH}/jruby-complete.jar" 
+        pathelement :location => "#{BASE_PATH}/jruby-complete-1.5.5.jar" 
       end
     end
   end
@@ -126,7 +126,7 @@ namespace :jython do
       arg :value => JYTHON_UUID_SAMPLE
       classpath do
         pathelement :location => "#{BASE_PATH}/jython/lib/jython.jar"
-        pathelement :location => "#{BASE_PATH}/jruby-complete.jar" 
+        pathelement :location => "#{BASE_PATH}/jruby-complete-1.5.5.jar" 
       end
     end
   end
@@ -160,7 +160,7 @@ namespace :groovy do
     end
     ant.groovy :src => "#{BASE_PATH}/groovy/uuid_sample.groovy" do
       classpath do
-        pathelement :location => "#{BASE_PATH}/jruby-complete.jar"
+        pathelement :location => "#{BASE_PATH}/jruby-complete-1.5.5.jar"
       end
     end
   end
@@ -181,7 +181,7 @@ namespace :jruby do
 
   desc 'Run uuidtools example'
   task :uuid do
-    ant.java :fork => "true", :jar => "#{BASE_PATH}/jruby-complete.jar" do
+    ant.java :fork => "true", :jar => "#{BASE_PATH}/jruby-complete-1.5.5.jar" do
       arg :value => JRUBY_UUID_SAMPLE
     end
   end

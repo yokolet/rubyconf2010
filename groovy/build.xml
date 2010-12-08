@@ -8,7 +8,7 @@
   <target name="run">
   <groovy src="${basedir}/uuid_sample.groovy">
     <classpath>
-      <pathelement location="${basedir}/../jruby-complete.jar"/>
+      <pathelement location="${basedir}/../jruby-complete-1.5.5.jar"/>
     </classpath>
   </groovy>
   </target>
