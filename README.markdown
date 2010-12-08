@@ -67,7 +67,7 @@ Groovy has two examples. Uuidtools example runs in the same way as clojure and j
 
 ``jruby -S rake grooby:uuid``
 
-Another example is a web app with rails. Install tomcat and make symbolic link to Hemlock or copy Hemlock into tomcat's webapp directory. Then request url on the browser:
+Another example is a web app with rails. Install tomcat and make symbolic link to Hemlock or copy Hemlock into tomcat's webapp directory. Then, request url on the browser:
 
 ``http://localhost:8080/Hemlock/initializer.groovy``
 
