@@ -15,7 +15,7 @@ CLOJURE_UUID_SAMPLE = "clojure/uuid_sample.clj"
 
 namespace :clojure do
   desc 'Install uuidtools and DataMapper gems in "clojure/lib" directory'
-  task :gems => 'bundler_install' do
+  task :gems do
     exec "jruby -S bundle install --gemfile=#{CLOJURE_GEMFILE} --path=#{CLOJURE_GEM_PATH}"
   end
 
