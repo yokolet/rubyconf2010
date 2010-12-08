@@ -1,7 +1,7 @@
 # RubyConf 2010 / RubyGems to All JVM Languages
 
 Here are examples used in my presentation at RubyConf 2010. You can see my slide at  [http://servletgarden-point.appspot.com/slideshow](http://servletgarden-point.appspot.com/slideshow).
-Samples are modifed so that those won't relay on environment variables on my PC :)
+Samples are modifed so that those won't rely on environment variables on my PC :)
 
 
 ## Prerequisite
