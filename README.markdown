@@ -50,7 +50,7 @@ or
 
 ## Scala example
 
-Scala examples get run in a different way. You need scala installed. For example, I have scala in /Users/yoko/Tools/scala-2.8.0.final directory. In this case,twitter example will run by `/Users/yoko/Tools/scala-2.8.0.final/bin/scala -cp ./jruby-complete-1.5.5.jar scala/uuid_sample.scala`.
+Scala examples get run in a different way. You need scala installed. For example, I have scala in /Users/yoko/Tools/scala-2.8.0.final directory. In my case, twitter example will run by `/Users/yoko/Tools/scala-2.8.0.final/bin/scala -cp ./jruby-complete-1.5.5.jar scala/uuid_sample.scala`.
 
 ``jruby -S rake scala:gems``
 
