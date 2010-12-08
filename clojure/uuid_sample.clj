@@ -1,0 +1,7 @@
+(comment "filename: uuid_sample.clj")
+(import '(org.jruby.embed ScriptingContainer))
+(def c (ScriptingContainer.))
+(def paths [(str (System/getProperty "user.dir") "/clojure/lib/jruby/1.8/gems/uuidtools-2.1.1/lib")])
+(. c setLoadPaths paths)
+(. c runScriptlet "require 'rubygems'; require 'uuidtools'")
+(prn (. c runScriptlet "UUIDTools::UUID.timestamp_create"))

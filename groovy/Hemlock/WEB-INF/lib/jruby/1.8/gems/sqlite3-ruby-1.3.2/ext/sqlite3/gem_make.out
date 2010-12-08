@@ -1,0 +1,4 @@
+java -jar /Users/yoko/Documents/workspace/Hemlock/WebContent/WEB-INF/lib/jruby-complete.jar extconf.rb 
+WARNING: JRuby does not support native extensions or the `mkmf' library.
+         Check http://kenai.com/projects/jruby/pages/Home for alternatives.
+extconf.rb:9: undefined method `dir_config' for main:Object (NoMethodError)

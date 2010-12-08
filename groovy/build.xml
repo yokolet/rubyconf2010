@@ -1,0 +1,15 @@
+<project name="groovy-example" default="run" basedir=".">
+  <taskdef name="groovy"
+           classname="org.codehaus.groovy.ant.Groovy">
+    <classpath>
+      <pathelement location="${basedir}/lib/groovy-all-1.7.5.jar"/>
+    </classpath>
+  </taskdef>
+  <target name="run">
+  <groovy src="${basedir}/uuid_sample.groovy">
+    <classpath>
+      <pathelement location="${basedir}/../jruby-complete.jar"/>
+    </classpath>
+  </groovy>
+  </target>
+</project>
