@@ -28,5 +28,56 @@ Then, run examples by:
 
 This task runs two examples, DataMapper and uuidtools. If you want to run each example individually, type:
 
-``jruby -S rake clojure:dm
-jruby -S rake clojure:uuid``
+``jruby -S rake clojure:dm``
+
+``jruby -S rake clojure:uuid``
+
+
+## Jython example
+
+In the same way, install gems then run examples:
+
+``jruby -S rake jython:gems``
+
+``jruby -S rake jython:examples``
+
+or
+
+``jruby -S rake jython:cucumber``
+
+``jruby -S rake jython:uuid``
+
+
+## Scala example
+
+Scala examples get run in a different way. You need scala installed. For example, I have scala in /Users/yoko/Tools/scala-2.8.0.final directory. In this case,twitter example will run by `/Users/yoko/Tools/scala-2.8.0.final/bin/scala -cp ./jruby-complete-1.5.5.jar scala/uuid_sample.scala`.
+
+``jruby -S rake scala:gems``
+
+``<path to scala>/bin/scala -cp ./jruby-complete-1.5.5.jar scala/redbridge_twitter.scala``
+
+``<path to scala>/bin/scala -cp ./jruby-complete-1.5.5.jar scala/uuid_sample.scala``
+
+
+## Groovy example
+
+Groovy has two examples. Uuidtools example runs in the same way as clojure and jython. So, install gem, then run:
+
+``jruby -S rake groovy:gems``
+
+``jruby -S rake grooby:uuid``
+
+Another example is a web app with rails. Install tomcat and make symbolic link to Hemlock or copy Hemlock into tomcat's webapp directory. Then request url on the browser:
+
+``http://localhost:8080/Hemlock/initializer.groovy``
+
+``http://localhost:8080/Hemlock/dispatcher.groovy``
+
+
+## JRuby example
+
+Exactly the same as others:
+
+``jruby -S rake jruby:gems``
+
+``jruby -S rake jruby:uuid``
