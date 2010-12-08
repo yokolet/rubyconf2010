@@ -5,12 +5,8 @@ task :default => [:all_examples]
 
 BASE_PATH = File.dirname(__FILE__)
 
-desc 'Install Bundler'
-task :bundler do
-  exec "jruby -S gem install bundler --no-ri --no-rdoc"
-end
-
-task :all_examples => ["clojure:examples", "scala:examples", "jython:examples", "groovy:examples", "jruby:examples"]
+desc 'Run all examples (except Scala)'
+task :all_examples => ["clojure:examples", "jython:examples", "groovy:examples", "jruby:examples"]
 
 CLOJURE_GEMFILE = "clojure/Gemfile"
 CLOJURE_GEM_PATH = "lib"               # relative path to Gemfile
@@ -62,10 +58,10 @@ namespace :scala do
     exec "jruby -S bundle install --gemfile=#{SCALA_GEMFILE} --path=#{SCALA_GEM_PATH}"
   end
 
-  desc 'Run Scala examples'
+  desc "Run Scala examples (doesn't work)"
   task :examples => ["twitter", "uuid"]
 
-  desc 'Run twitter example'
+  desc "Run twitter example (doesn't work)"
   task :twitter do
     ant.java :fork => "true", :classname => "scala.tools.nsc.MainGenericRunner" do
       sysproperty :key => "scala.home", :value => "#{BASE_PATH}/scala"
@@ -79,7 +75,7 @@ namespace :scala do
     end
   end
 
-  desc 'Run uuidtools example'
+  desc "Run uuidtools example (doesn't work)"
   task :uuid do
     ant.java :fork => "true", :classname => "scala.tools.nsc.MainGenericRunner" do
       sysproperty :key => "scala.home", :value => "#{BASE_PATH}/scala"
