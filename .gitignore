@@ -1,3 +1,4 @@
 */Gemfile.lock
+*/.bundle
 */lib/jruby
 jython/lib/cachedir
